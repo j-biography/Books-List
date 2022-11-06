@@ -4,6 +4,7 @@ from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 
 import sys
+from Window_Function import *
 
 
 class Window_Main(QMainWindow): # QMainWindow는 최상위 위젯이며, 자동으로 QWidget이 하위 자식으로 생성됨.
@@ -16,11 +17,14 @@ class Window_Main(QMainWindow): # QMainWindow는 최상위 위젯이며, 자동�
         widget = QWidget()
         grid = QGridLayout(widget)
         grid.setAlignment(Qt.AlignCenter)
-        self.setCentralWidget(widget)
-
+        
         grid.addWidget(QLabel('Library'), 0, 0)
         grid.addWidget(QPushButton('Add Book'), 1, 0)
-
+        grid.addWidget(QLineEdit(), 2, 0)
+        grid.addWidget(QPushButton('Search'), 2, 1)
+        grid.setColumnStretch(1, 1)
+        
+        self.setCentralWidget(widget)
         self.setWindowTitle('Library')
         self.setGeometry(500, 500, 500, 500)
         self.setLayout(grid)
