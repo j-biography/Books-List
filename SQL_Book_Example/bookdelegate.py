@@ -13,7 +13,7 @@ class BookDelegate(QSqlRelationalDelegate):
 
     def __init__(self, parent=None):
         QSqlRelationalDelegate.__init__(self, parent)
-        self.star = QPixmap(":/images/star.png")
+        self.star = QPixmap(":/images/Star.png")
 
     def paint(self, painter, option, index):
         """ Paint the items in the table.

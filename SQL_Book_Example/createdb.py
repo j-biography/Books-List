@@ -1,8 +1,9 @@
 # Copyright (C) 2022 The Qt Company Ltd.
 # SPDX-License-Identifier: LicenseRef-Qt-Commercial OR BSD-3-Clause
 
-from PySide6.QtSql import QSqlDatabase, QSqlQuery
 from datetime import date
+
+from PySide6.QtSql import QSqlDatabase, QSqlQuery
 
 
 def add_book(q, title, year, authorId, genreId, rating):
