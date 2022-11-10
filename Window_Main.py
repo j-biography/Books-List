@@ -3,6 +3,7 @@ from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 
+import Database
 import sys
 from Window_Function import *
 
