@@ -9,4 +9,6 @@ class Function():
 
     def __init__(self):
         super().__init__()
-        
+    
+    def Add_Book_Function():
+        print()
