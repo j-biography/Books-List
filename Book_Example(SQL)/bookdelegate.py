@@ -9,14 +9,14 @@ from PySide6.QtCore import QEvent, QSize, Qt
 
 
 class BookDelegate(QSqlRelationalDelegate):
-    """Books delegate to rate the books"""
+    # Books delegate to rate the books (책에 대한 평점 부여를 위임하는 기능)
 
     def __init__(self, parent=None):
         QSqlRelationalDelegate.__init__(self, parent)
         self.star = QPixmap(":/images/Star.png")
 
     def paint(self, painter, option, index):
-        """ Paint the items in the table.
+        """ Paint the items in the table. 테이블 영역 내의 아이템에 색을 칠하는 기능.
 
             If the item referred to by <index> is a StarRating, we
             handle the painting ourselves. For the other items, we
