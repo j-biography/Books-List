@@ -4,7 +4,8 @@ from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 from PySide6.QtSql import *
 
-from Main_UI import *
+from Main_UI import Main_UI
+from Add_Book import Add_Book
 
 
 class Window_Main(QMainWindow, Main_UI): 
@@ -13,9 +14,7 @@ class Window_Main(QMainWindow, Main_UI):
         super().__init__()
         self.setupUi(self)
         self.setWindowTitle('Book List')
-
-
-    def Add_book(q, Title, Date_of_Purchase, Author):
-        q.addBindValue(Title)
-        q.addBindValue(Date_of_Purchase)
-        q.addBindValue(Author)
+ 
+        self.Add_Book_Window = Add_Book()
+        
+        self.pushButton_2.clicked.connect(self.Add_Book_Window.show)
