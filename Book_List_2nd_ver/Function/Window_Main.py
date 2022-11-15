@@ -17,6 +17,6 @@ class Window_Main(QMainWindow, Main_UI):
  
         self.Add_Book_Window = Add_Book()
         
-        self.pushButton.clicked.connect()
+        # self.pushButton.clicked.connect()
         self.pushButton_2.clicked.connect(self.Add_Book_Window.show)
-        self.pushButton_3.clicked.connect()
+        # self.pushButton_3.clicked.connect()
