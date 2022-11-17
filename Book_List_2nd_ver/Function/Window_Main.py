@@ -7,6 +7,8 @@ from PySide6.QtSql import *
 from UI.Main_UI import Main_UI
 from Function.Add_Book import Add_Book
 
+import DB.Database
+
 
 class Window_Main(QMainWindow, Main_UI): 
 
@@ -19,4 +21,4 @@ class Window_Main(QMainWindow, Main_UI):
         
         # self.pushButton.clicked.connect()
         self.pushButton_2.clicked.connect(self.Add_Book_Window.show)
-        # self.pushButton_3.clicked.connect()
+        # self.pushButton_3.clicked.connect(self.quit)
